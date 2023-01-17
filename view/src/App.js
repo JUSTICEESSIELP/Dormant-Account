@@ -12,7 +12,7 @@ function App (){
      
       <button className="hover:bg-slate-400 bg-slate-100 ml-8 p-2 border rounded" onClick={handleModal}>View Document</button>
       
-      <Modal tapModal = {tapModal} closeModal = {()=>setModal(false)}>
+      <Modal tapModal = {tapModal} closeModal = {()=>setModal(!tapModal)}>
         
       </Modal>
 

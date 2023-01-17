@@ -1,0 +1,134 @@
+     <div className="bodyFlex">
+{/* far left */}
+            {/* <div></div> */}
+
+{/* middle-left */}
+            <div className="colFlex">
+                
+                   
+                    <div className="rowFlex2">
+                        <label>Account No</label>
+                        <input className='' ref={inputAccountNumber} onKeyPress={(e) => handleKeyPress(e)}  type='text' style={{border:'1px solid #5656DB', marginLeft:'13px'}}/>
+                    </div>
+
+                   
+                    <div className="rowFlex2">
+                        <label className="">A/C Name</label>
+                        
+                        <input disabled value={getData.ACCOUNT_DESCRP} type='text' style={{border:'1px solid #5656DB', width:'700px', marginLeft:'22px'}}/>
+                    
+                    </div>
+
+                   
+                    <div className="rowFlex2">
+                        <label>Currency</label>
+                        
+                        <input disabled type='text' value = {getData.Currency}style={{border:'1px solid #5656DB', width:'400px', marginLeft:'32px'}}/>
+                    
+                    </div>
+                   
+                    <div className="rowFlex2">
+                        <label>Product</label>
+                        <input  disabled value={getData.PROD_CODE} type='text' style={{border:'1px solid #5656DB', width:'700px', marginLeft:'39px'}}/>
+                    </div>
+
+
+                     
+                    <div className="rowFlex2">
+                        <label>Branch</label>
+                        <input disabled value={getData.BRDESC} type='text' style={{border:'1px solid #5656DB' , width:'400px', marginLeft:'45px'}}/> 
+                    </div>
+
+                    {/* <div style={{display:'flex', justifyContent:'space-around'}}>
+                        
+                            <label >A/C Status</label>
+                            <input type='text' style={{border:'1px solid #5656DB', flexGrow:'1'}}/>
+                        
+                    </div> */}
+                                       
+                    <div className="rowFlex2">
+                        <label>A/C Status</label>
+                        
+                        <input value={getData.STATUS_DESC} type='text' style={{ border:'1px solid #5656DB', width:'400px', marginLeft:'20px'}}/>
+                    
+                    </div>
+
+                    
+           
+
+                    <div className="rowFlex2">
+                        <div className="rowFlex2">
+                                <label htmlFor="accountNo">Date Opened</label>
+                                <input value={getData.PROD_CODE} type='text' style={{border:'1px solid #5656DB' }}/>
+                        </div>
+                        <div className="rowFlex2">
+                                <label htmlFor="accountNo">Date of Last Activity</label>
+                                <input type='text' style={{border:'1px solid #5656DB'}}/>
+                        </div>
+                        <div className="rowFlex2">
+                                <label htmlFor="accountNo">Level Id</label>
+                                <input type='text' style={{border:'1px solid #5656DB'}}/>
+                        </div>
+                    </div>
+                    
+                    <div className="rowFlex2">
+                        <label>Reason</label>
+                        
+                        <input type='text' style={{border:'1px solid #5656DB', width:'700px', marginLeft:'42px'}}/>
+                    
+                    </div>
+
+                    <div className="rowFlex2">
+                        <label>Document no</label>
+                        <input type='text' style={{border:'1px solid #297dca'}}/>
+                        
+                        <button className="button">View Document</button>
+
+                    </div>
+
+
+                  
+                    
+
+              
+
+            </div>
+
+            <div className="rightSide" style={{backgroundColor:"#297dca", boxShadow:'rgba(0,0,0,.35) 0px 5px 15px'}}>
+                <h1 style={{textAlign:'center', color:'white'}}>Balance</h1>
+                <div className="rowFlex">
+                    <label htmlFor="customerStatus "  className="width-20">Cust Status</label>
+                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
+                </div>
+
+                <div className="rowFlex">
+                    <label htmlFor="customerStatus" className="width-20">Accrued Int</label>
+                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
+                </div>
+
+                <div className="rowFlex">
+                    <label htmlFor="customerStatus" className="width-20">Accrued OD Amt</label>
+                    <input value ={getData.ACR_INT} type='text' className="width-80" style={{color:'blanchedalmond'}}/>
+                </div>
+
+                <div className="rowFlex">
+                    <label htmlFor="customerStatus" className="width-20">COT Amt</label>
+                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
+                </div>
+                <div className="rowFlex">
+                    <label htmlFor="customerStatus" className="width-20">Accrued Fees</label>
+                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
+                </div>
+
+                <div className="rowFlex">
+                    <label htmlFor="customerStatus" className="width-20">Current Bal</label>
+                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
+                </div>
+
+                <div className="rowFlex">
+                    <label htmlFor="customerStatus" className="width-20">Net Bal</label>
+                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
+                </div>
+            </div>
+
+     </div>

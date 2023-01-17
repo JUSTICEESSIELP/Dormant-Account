@@ -358,10 +358,11 @@ const MODAL_STYLES = {
 //   overflowY:'scroll',
   boxShadow:'rgba(0,0,0,.35) 0px 5px 15px',
   padding:'25px',
-  borderRadius:'0.4%', 
+  borderRadius:'1%', 
   display:'flex', 
   flexDirection:'column',
-  flexWrap:'wrap',
+//   flexWrap:'nowrap',
+  overflow:'auto'
 //   overflow:'auto'
 
 }
@@ -439,12 +440,12 @@ export default function Modal({ tapModal, closeModal}) {
 
   return ReactDom.createPortal(
     <>
-      <div style={OVERLAY_STYLES} />
-      <div style={MODAL_STYLES}>
-      <div className ='flex title'>
-            <h1>Dormant Account Reactivation</h1>
-            <button  className= '' onClick={closeModal}>X</button>
-      </div>
+      <div style={OVERLAY_STYLES} onClick={closeModal} />
+      <div style={MODAL_STYLES} className= 'modalContainer'>
+      
+        <header className='titleHeader'>Dormant Account Reactivation</header>
+            
+      
 
 {/* nav */}
       <div className='flexNav'>
@@ -500,140 +501,143 @@ export default function Modal({ tapModal, closeModal}) {
       </div>
 
 {/* body */}
-     <div className="bodyFlex">
-{/* far left */}
-            {/* <div></div> */}
+<div>
+    <form>
+        <div class = 'form first '>
+            <div class = 'details balance'>
+                <span className='formTitle'>Account Details</span>
 
-{/* middle-left */}
-            <div className="colFlex">
-                
-                   
-                    <div className="rowFlex2">
-                        <label>Account No</label>
-                        <input className='' ref={inputAccountNumber} onKeyPress={(e) => handleKeyPress(e)}  type='text' style={{border:'1px solid #5656DB', marginLeft:'13px'}}/>
-                    </div>
+                <div className= 'fields'>
 
-                   
-                    <div className="rowFlex2">
-                        <label className="">A/C Name</label>
+                    <div className='input-field'>
+                        <label>Account Number</label>
+                        <input type ='text' />
                         
-                        <input disabled value={getData.ACCOUNT_DESCRP} type='text' style={{border:'1px solid #5656DB', width:'700px', marginLeft:'22px'}}/>
-                    
                     </div>
 
-                   
-                    <div className="rowFlex2">
+                    <div className='input-field'>
+                        <label>Account Name</label>
+                        <input type ='text' />
+                        
+                    </div>
+
+                    <div className='input-field'>
+                        <label>Account Status</label>
+                        <input type ='text' />
+                        
+                    </div>
+
+
+
+                    <div className='input-field'>
                         <label>Currency</label>
+                        <input type ='text' />
                         
-                        <input disabled type='text' value = {getData.Currency}style={{border:'1px solid #5656DB', width:'400px', marginLeft:'32px'}}/>
-                    
                     </div>
-                   
-                    <div className="rowFlex2">
+
+                    <div className='input-field'>
                         <label>Product</label>
-                        <input  disabled value={getData.PROD_CODE} type='text' style={{border:'1px solid #5656DB', width:'700px', marginLeft:'39px'}}/>
+                        <input type ='text' />
+                        
+                    </div>
+                    
+                    <div className='input-field'>
+                        <label>Date Opened</label>
+                        <input type ='text' />
+                        
                     </div>
 
-
-                     
-                    <div className="rowFlex2">
+                    <div className='input-field'>
                         <label>Branch</label>
-                        <input disabled value={getData.BRDESC} type='text' style={{border:'1px solid #5656DB' , width:'400px', marginLeft:'45px'}}/> 
+                        <input type ='text' />
+                        
                     </div>
 
-                    {/* <div style={{display:'flex', justifyContent:'space-around'}}>
+                    <div className='input-field' style={{"flex":'row'}}>
+                        <label>Document No</label>
+                        <input type ='text' />
+                       
                         
-                            <label >A/C Status</label>
-                            <input type='text' style={{border:'1px solid #5656DB', flexGrow:'1'}}/>
-                        
-                    </div> */}
-                                       
-                    <div className="rowFlex2">
-                        <label>A/C Status</label>
-                        
-                        <input value={getData.STATUS_DESC} type='text' style={{ border:'1px solid #5656DB', width:'400px', marginLeft:'20px'}}/>
-                    
                     </div>
 
-                    
-           
-
-                    <div className="rowFlex2">
-                        <div className="rowFlex2">
-                                <label htmlFor="accountNo">Date Opened</label>
-                                <input value={getData.PROD_CODE} type='text' style={{border:'1px solid #5656DB' }}/>
-                        </div>
-                        <div className="rowFlex2">
-                                <label htmlFor="accountNo">Date of Last Activity</label>
-                                <input type='text' style={{border:'1px solid #5656DB'}}/>
-                        </div>
-                        <div className="rowFlex2">
-                                <label htmlFor="accountNo">Level Id</label>
-                                <input type='text' style={{border:'1px solid #5656DB'}}/>
-                        </div>
-                    </div>
-                    
-                    <div className="rowFlex2">
+                    <div className='input-field'>
                         <label>Reason</label>
+                        <input type ='textarea' />
                         
-                        <input type='text' style={{border:'1px solid #5656DB', width:'700px', marginLeft:'42px'}}/>
-                    
-                    </div>
-
-                    <div className="rowFlex2">
-                        <label>Document no</label>
-                        <input type='text' style={{border:'1px solid #297dca'}}/>
-                        
-                        <button className="button">View Document</button>
-
                     </div>
 
 
-                  
+
+
+                </div>
+            
+            </div>
+            
+            <div className= 'middle-ground-container'>
+                <div className='middle-ground'></div>
+            </div>
+
+            <div class = 'details balance'>
+                <span className='formTitle'>Balance</span>
+
+                <div className= 'fields'>
+
+                    <div className='input-field'>
+                        <label>Customer Status</label>
+                        <input type ='text' />
+                        
+                    </div>
+
+                    <div className='input-field'>
+                        <label>Accrued Int</label>
+                        <input type ='text' />
+                        
+                    </div>
+
+                    <div className='input-field'>
+                        <label>Accrued OD Amount</label>
+                        <input type ='text' />
+                        
+                    </div>
+
+
+
+                    <div className='input-field'>
+                        <label>COT Amount</label>
+                        <input type ='text' />
+                        
+                    </div>
+
+                    <div className='input-field'>
+                        <label>Accrued Fees</label>
+                        <input type ='text' />
+                        
+                    </div>
                     
+                    <div className='input-field'>
+                        <label>Current Balance</label>
+                        <input type ='text' />
+                        
+                    </div>
 
-              
+                    <div className='input-field'>
+                        <label>Net Balance</label>
+                        <input type ='text' />
+                        
+                    </div>
 
+
+
+
+
+                </div>
+            
             </div>
 
-            <div className="rightSide" style={{backgroundColor:"#297dca", boxShadow:'rgba(0,0,0,.35) 0px 5px 15px'}}>
-                <h1 style={{textAlign:'center', color:'white'}}>Balance</h1>
-                <div className="rowFlex">
-                    <label htmlFor="customerStatus "  className="width-20">Cust Status</label>
-                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
-                </div>
+        </div>
+    </form>
+</div>
 
-                <div className="rowFlex">
-                    <label htmlFor="customerStatus" className="width-20">Accrued Int</label>
-                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
-                </div>
-
-                <div className="rowFlex">
-                    <label htmlFor="customerStatus" className="width-20">Accrued OD Amt</label>
-                    <input value ={getData.ACR_INT} type='text' className="width-80" style={{color:'blanchedalmond'}}/>
-                </div>
-
-                <div className="rowFlex">
-                    <label htmlFor="customerStatus" className="width-20">COT Amt</label>
-                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
-                </div>
-                <div className="rowFlex">
-                    <label htmlFor="customerStatus" className="width-20">Accrued Fees</label>
-                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
-                </div>
-
-                <div className="rowFlex">
-                    <label htmlFor="customerStatus" className="width-20">Current Bal</label>
-                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
-                </div>
-
-                <div className="rowFlex">
-                    <label htmlFor="customerStatus" className="width-20">Net Bal</label>
-                    <input value = {getData.ACR_INT} type='text' className="width-80" style = {{color:'blanchedalmond'}}/>
-                </div>
-            </div>
-
-     </div>
 
 
 {/* table sesssion */}

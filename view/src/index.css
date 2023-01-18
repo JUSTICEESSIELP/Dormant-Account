@@ -64,7 +64,7 @@
   left:0;
   height:3px;
   width:97px;
-  background-color: #4070f4;
+  background:linear-gradient(45deg, rgb(157, 133, 133),#4070f4);;
   border-radius: 8px;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .footer{
-  background-color: #4070f4;
+  background: linear-gradient(45deg, rgb(157, 133, 133),#4070f4);;
   color:white;
   padding:4px;
   /* height:40px; */
@@ -137,7 +137,8 @@ form .form{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: end;
-  border-bottom: 5px solid #4070f4;
+  border-bottom: 5px solid;
+  border-color: linear-gradient(45deg, rgb(157, 133, 133),#4070f4);;
   margin-top: 20px;
   /* margin-bottom: 20px; */
   padding:15px
@@ -181,11 +182,29 @@ form .form{
   padding:20px;
   /* flex-grow: 1; */
 }
+
+#balance-container{
+  background: linear-gradient(45deg, rgb(157, 133, 133),#4070f4);
+  color:white;
+  padding:25px;
+  box-shadow: whitesmoke;
+  border-radius: 3%;
+  /* row-gap: 100px ; */
+}
+
+#account-container{
+  padding:25px
+}
+
+
+
+
+
 .rowFlex{
   display:flex;
   flex-direction: row;
-  column-gap: 20px;
-  color: white;
+  column-gap: 90px;
+  
 }
 /* .flexBasis{
   
@@ -224,7 +243,7 @@ form .form{
   text-align: center;
   color:white;
   padding:1px;
-  background-color: #4070f4;
+  background: linear-gradient(45deg, rgb(157, 133, 133),#4070f4);;
   margin-top: 20px;
   padding:3px
 }

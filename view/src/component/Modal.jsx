@@ -501,29 +501,29 @@ export default function Modal({ tapModal, closeModal}) {
       </div>
 
 {/* body */}
-<div>
-    <form>
-        <div class = 'form first '>
-            <div class = 'details balance'>
+<div >
+    <form >
+        <div class = 'form first rowFlex'>
+            <div id = 'account-container'class = 'details balance'>
                 <span className='formTitle'>Account Details</span>
 
                 <div className= 'fields'>
 
                     <div className='input-field'>
                         <label>Account Number</label>
-                        <input type ='text' />
+                        <input type ='text'  ref={inputAccountNumber} onKeyPress={(e) => handleKeyPress(e)} />
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Account Name</label>
-                        <input type ='text' />
+                        <input type ='text' disabled value={getData.ACCOUNT_DESCRP} />
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Account Status</label>
-                        <input type ='text' />
+                        <input type ='text' disabled value={getData.PROD_CODE} />
                         
                     </div>
 
@@ -531,38 +531,38 @@ export default function Modal({ tapModal, closeModal}) {
 
                     <div className='input-field'>
                         <label>Currency</label>
-                        <input type ='text' />
+                        <input type ='text' disabled value = {getData.Currency}/>
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Product</label>
-                        <input type ='text' />
+                        <input type ='text' disabled value={getData.PROD_CODE} />
                         
                     </div>
                     
                     <div className='input-field'>
                         <label>Date Opened</label>
-                        <input type ='text' />
+                        <input type ='text' disabled value={getData.PROD_CODE} />
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Branch</label>
-                        <input type ='text' />
+                        <input type ='text' disabled value={getData.PROD_CODE} />
                         
                     </div>
 
                     <div className='input-field' style={{"flex":'row'}}>
                         <label>Document No</label>
-                        <input type ='text' />
+                        <input type ='text' disabled value={getData.PROD_CODE} />
                        
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Reason</label>
-                        <input type ='textarea' />
+                        <input type ='text' disabled value={getData.PROD_CODE} />
                         
                     </div>
 
@@ -573,30 +573,28 @@ export default function Modal({ tapModal, closeModal}) {
             
             </div>
             
-            <div className= 'middle-ground-container'>
-                <div className='middle-ground'></div>
-            </div>
 
-            <div class = 'details balance'>
+
+            <div id = 'balance-container'className='details balance'>
                 <span className='formTitle'>Balance</span>
 
                 <div className= 'fields'>
 
                     <div className='input-field'>
                         <label>Customer Status</label>
-                        <input type ='text' />
+                        <input type ='text' disabled />
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Accrued Int</label>
-                        <input type ='text' />
+                        <input type ='text' disabled />
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Accrued OD Amount</label>
-                        <input type ='text' />
+                        <input type ='text' disabled />
                         
                     </div>
 
@@ -604,25 +602,25 @@ export default function Modal({ tapModal, closeModal}) {
 
                     <div className='input-field'>
                         <label>COT Amount</label>
-                        <input type ='text' />
+                        <input type ='text' disabled />
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Accrued Fees</label>
-                        <input type ='text' />
+                        <input type ='text' disabled />
                         
                     </div>
                     
                     <div className='input-field'>
                         <label>Current Balance</label>
-                        <input type ='text' />
+                        <input type ='text' disabled />
                         
                     </div>
 
                     <div className='input-field'>
                         <label>Net Balance</label>
-                        <input type ='text' />
+                        <input type ='text' disabled />
                         
                     </div>
 
